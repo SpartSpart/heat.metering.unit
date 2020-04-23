@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.spart.heat.metering.unit.repository.model.day.ArKm5DayEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.day.ArMagikaDayEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.day.ArSpt941DayEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.day.ArSpt942DayEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.day.ArSpt943DayEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.day.ArTv7DayEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.day.ArVkt7DayEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.hour.ArKm5HEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.hour.ArMagikaHEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.hour.ArSpt941HEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.hour.ArSpt942HEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.hour.ArSpt943HEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.hour.ArTv7HEntity</class>
+        <class>com.spart.heat.metering.unit.repository.model.hour.ArVkt7HEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:firebirdsql://localhost:3050/C:\\TEMP\\MR\\opros.FDB"/>
+            <property name="hibernate.connection.driver_class" value="org.firebirdsql.jdbc.FBDriver"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
