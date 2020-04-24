@@ -123,41 +123,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 
 
-    //    public void update(long id, User user) {
-//        Optional<UserData> newUser = userDataRepository.findById(id);
-//
-//        newUser.get().setPassword(user.getPassword());
-//        newUser.get().setLogin(user.getLogin());
-//
-//        userDataRepository.saveAndFlush(newUser.get());
-//    }
-
-//    public User getUser(String login) {
-//        Optional<UserData> userData = ;
-//        User user = new User();
-//
-//        user.setId(userData.get().getId());
-//        user.setLogin(userData.get().getLogin());
-//        user.setPassword(userData.get().getPassword());
-//
-//        return user;
-//    }
-
-
-//    public void deleteUser(long id) {
-//        userDataRepository.deleteById(id);
-//    }
-//
-//
-//    public UserDetails getCurrent() {
-//        return (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//    }
-//
-//    public boolean isUser(String login){
-//        if(!userDataRepository.findByLogin(login).equals(null))
-//            return true;
-//        return false;
-//    }
-
-
 }
