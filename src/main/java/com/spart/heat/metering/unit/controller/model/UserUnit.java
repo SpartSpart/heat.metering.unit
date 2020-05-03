@@ -6,6 +6,11 @@ public class UserUnit {
     private int userId;
     private int unitId;
 
+    public UserUnit(int userId, int unitId) {
+        this.userId = userId;
+        this.unitId = unitId;
+    }
+
     public int getId() {
         return id;
     }

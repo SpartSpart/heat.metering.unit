@@ -41,4 +41,24 @@ public class Unit {
     public void setAdress(String adress) {
         this.adress = adress;
     }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (o == this) return true;
+        if (!(o instanceof Unit)) {
+            return false;
+        }
+
+        Unit unit = (Unit) o;
+
+        return unit.unitNumber == unitNumber &&
+                unit.organization.equals(organization);
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(unitNumber)+
+                " ("+adress+")";
+    }
 }

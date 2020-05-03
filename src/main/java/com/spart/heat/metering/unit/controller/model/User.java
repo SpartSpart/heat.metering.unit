@@ -7,6 +7,14 @@ public class User {
     private String email;
     private int permission;
 
+    public User(String login, String password, String email) {
+        this.login = login;
+        this.password = password;
+        this.email = email;
+    }
+
+    public User() {}
+
     public int getId() {return id;}
 
     public void setId(int id) {this.id = id;}

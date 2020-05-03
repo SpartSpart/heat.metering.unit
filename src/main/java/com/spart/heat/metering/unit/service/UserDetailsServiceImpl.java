@@ -1,5 +1,6 @@
 package com.spart.heat.metering.unit.service;
 
+import com.spart.heat.metering.unit.constants.Messages;
 import com.spart.heat.metering.unit.controller.model.User;
 import com.spart.heat.metering.unit.repository.UserDataRepository;
 import com.spart.heat.metering.unit.repository.UserUnitDataRepository;
@@ -21,8 +22,6 @@ import java.util.List;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-    private final String MESSAGE = "Success";
-    private final String USER_ALREADY_EXISTS = "User already exists";
 
     private final UserDataRepository userDataRepository;
     private final UserUnitDataRepository userUnitDataRepository;
@@ -36,8 +35,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Transactional
     public String add(UserDetailsImpl userDetails) {
 
-
-        String message = MESSAGE;
+        String message = Messages.SUCCESS.getMessage();
 
         int idIncrement = getIncrement();
         if (!userDataRepository.findByLogin(userDetails.getUsername()).isPresent()) {
@@ -51,7 +49,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             userDataRepository.saveAndFlush(newUser);
         }
         else
-            message = USER_ALREADY_EXISTS;
+            message = Messages.USER_ALREADY_EXISTS.getMessage();
 
         return message;
     }
